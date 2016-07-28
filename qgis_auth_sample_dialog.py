@@ -103,7 +103,7 @@ class AuthSampleDialog(QDialog, FormClass):
         self.stopButton.clicked.connect(self.webView.stop)
 
         self.comboBox.lineEdit().returnPressed.connect(self.enterUrl)
-        self.comboBox.activated[str].connect(self.loadUrl)
+        self.comboBox.activated['QString'].connect(self.loadUrl)
         self.clearButton.clicked.connect(self.clearLog)
 
         self.resize(800, 600)
